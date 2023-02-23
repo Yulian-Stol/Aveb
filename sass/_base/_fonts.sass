@@ -1,0 +1,23 @@
+// font-weight helper:
+// 100 Extra Light or Ultra Light;
+// 200 Light or Thin; 300 Book or Demi;
+// 400 Regular or Normal;
+// 500 Medium;
+// 600 Semibold or Demibold;
+// 700 Bold;
+// 800 Black or Extra Bold or Heavy;
+// 900 Extra Black or Fat or Ultra Black
+@mixin font($f-name, $f-style, $f-weight, $f-url)
+	@font-face
+		font-family: $f-name
+		font-style: $f-style
+		font-weight: $f-weight
+		src: url($f-url) format('woff2')
+		font-display: swap
+
+
+@include font('Arial', normal, 400, '../fonts/ArialMT.woff2')
+@include font('Arial-bold', normal, 700, '../fonts/Arial-BoldMT.woff2')
+@include font('Trebuchet', normal, 700, '../fonts/TrebuchetMS-Bold.woff')
+@include font('DMSans', normal, 400, '../fonts/DMSans-Regular.woff2')
+@include font('DMSans-bold', normal, 700, '../fonts/DMSans-Bold.woff2')
